@@ -1,0 +1,21 @@
+{
+  "simplefin": {
+    "setupToken": "PASTE_SETUP_TOKEN_HERE",
+    "accessUrl": null
+  },
+  "actual": {
+    "serverUrl": "https://your-actual-server.example.com",
+    "password": "your-password",
+    "budgetSyncId": "your-budget-sync-id",
+    "dataDir": "./actual-data"
+  },
+  "accountMapping": [
+    {
+      "simpleFinAccountId": "ACT-abc-123",
+      "actualAccountId": "uuid-from-actual",
+      "label": "Checking"
+    }
+  ],
+  "adjustmentPayee": "Balance Adjustment",
+  "adjustmentNotes": "Automated balance adjustment from SimpleFin"
+}
