@@ -20,4 +20,5 @@ Typical flow: adjust `config.json` → run `node index.js` → review output.
 ## Docker Deployment
 The containerized baladjust runs on a cron schedule. 
 Set `CRON` environment variable to the cron schedule on which you want the baladjust to run. 
+If SimpleFin access URL or setup token are not set in `config.json`, you can set them using the `SIMPLEFIN_ACCESSURL` and `SIMPLEFIN_SETUPTOKEN` environment variables, respectively. Access URL will be respected over setup tokens. 
 TOOD: pattern for importing and/or generating configs
