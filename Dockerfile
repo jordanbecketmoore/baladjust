@@ -17,7 +17,6 @@ RUN npm ci --only=production
 
 # Copy application code
 COPY *.js .
-COPY *.lock .
 
 # Create crontab file
 # Default: runs every day at midnight UTC. Modify as needed.
