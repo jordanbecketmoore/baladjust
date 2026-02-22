@@ -16,11 +16,11 @@ COPY package*.json ./
 RUN npm ci --only=production
 
 # Copy application code
-COPY *.js .
+COPY index.js ./
+COPY entrypoint.sh ./
 
-# Create crontab file
-# Default: runs every day at midnight UTC. Modify as needed.
-RUN echo "0 0 * * * npm start" > /app/crontab
+# Default cron schedule (midnight UTC daily)
+ENV CRON="0 0 * * *"
 
-# Run supercronic
-CMD ["supercronic", "-foreground", "/app/crontab"]
+# Run entrypoint script
+CMD ["/app/entrypoint.sh"]
