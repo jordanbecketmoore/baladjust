@@ -1,3 +1,5 @@
 node_modules/
 config.json
 actual-data/*
+.env
+accounts.json

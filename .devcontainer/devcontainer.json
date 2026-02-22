@@ -1,0 +1,21 @@
+{
+  "name": "Actual Budget — Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "containerEnv": {
+    "NODE_ENV": "development"
+  },
+  "postCreateCommand": "npm install",
+  "remoteUser": "node",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "forwardPorts": [3000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "GitHub.vscode-pull-request-github"
+      ]
+    }
+  }
+}
