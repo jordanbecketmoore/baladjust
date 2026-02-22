@@ -7,16 +7,17 @@ A minimal Node.js utility for adjusting and inspecting account data for budgetin
 - **Language:**: JavaScript (Node.js)
 - **Files:**: `config.example.json`, `index.js`, `package.json`, `LICENSE`
 
-## Quick Start**
+## Quick Start
 - **Install:**: Run `npm install` to install dependencies defined in `package.json`.
 - **Run:**: Use `node index.js` to run the main script. See any CLI options printed by the script if present.
 
-## Configuration**
+## Configuration
 - **Example config:**: Copy `config.example.json` to `config.json` and update values to match your environment.
 
-## Usage**
+## Usage
 Typical flow: adjust `config.json` → run `node index.js` → review output.
 
 ## Docker Deployment
 The containerized baladjust runs on a cron schedule. 
 Set `CRON` environment variable to the cron schedule on which you want the baladjust to run. 
+TOOD: pattern for importing and/or generating configs
