@@ -18,6 +18,7 @@ RUN npm ci --only=production
 # Copy application code
 COPY index.js ./
 COPY entrypoint.sh ./
+RUN echo "{}" > ./config.json
 
 # Default cron schedule (midnight UTC daily)
 ENV CRON="0 0 * * *"
