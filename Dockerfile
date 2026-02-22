@@ -1,7 +1,7 @@
 FROM node:20-alpine
 
-# Install supercronic for cron scheduling
-RUN apk add --no-cache curl && \
+# Install supercronic for cron scheduling and jq
+RUN apk add --no-cache curl jq && \
     curl -fsSLO https://github.com/aptible/supercronic/releases/download/v0.2.29/supercronic-linux-amd64 && \
     chmod +x supercronic-linux-amd64 && \
     mv supercronic-linux-amd64 /usr/local/bin/supercronic && \
