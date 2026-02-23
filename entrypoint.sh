@@ -28,6 +28,7 @@ if ([ -z "$ACCESS_URL" ] || [ "$ACCESS_URL" == "null" ]) && ([ -z "$SETUP_TOKEN"
   fi
 fi
 
+mkdir -p $(jq -r '.actual.dataDir // empty' /app/config.json)
 
 # Create crontab and run supercronic
 echo "${CRON:-0 0 * * *} npm start" > /app/crontab
