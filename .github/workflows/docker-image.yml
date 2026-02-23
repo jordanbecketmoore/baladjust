@@ -1,11 +1,17 @@
 name: Docker Image CI
+
 on:
   push:
     branches: [ "*" ]
     tags:
       - "v*.*.*"
+
 jobs:
+
   build:
+
+    runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v4
     - name: Build, Tag & Publish Image to DockerHub
@@ -13,8 +19,8 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        context: ./
-        file: ./Dockerfile
+        context: ./autocrane-operator
+        file: ./autocrane-operator/Dockerfile
         repoOwner: ${{ secrets.DOCKER_USERNAME }}
-        repository:  baladjust
+        repository:  autocrane
         tag: ${{ github.ref_name == 'main' && 'latest' || github.ref_name }}
