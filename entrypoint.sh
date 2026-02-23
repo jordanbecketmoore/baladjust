@@ -31,4 +31,4 @@ fi
 
 # Create crontab and run supercronic
 echo "${CRON:-0 0 * * *} npm start" > /app/crontab
-exec supercronic -foreground /app/crontab
+exec supercronic /app/crontab
